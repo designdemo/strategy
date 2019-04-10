@@ -9,7 +9,7 @@ import com.strategy.pay.payport.PayStrategy;
 public class PayStrategyTest {
 
     public static void main(String[] args) {
-        Order order = new Order("1","sdfsadfasdfasdfs",500);
+        Order order = new Order("1","sdfsadfasdfasdfs",560);
 
         PayStatus pay = order.pay(PayStrategy.UNION_PAY);
         System.out.println(pay);

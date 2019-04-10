@@ -2,6 +2,7 @@ package com.strategy.pay;
 
 import com.strategy.pay.payport.PayMent;
 import com.strategy.pay.payport.PayStrategy;
+import com.strategy.pay.payport.PayStrategyEnum;
 
 /**
  * author:曲终、人散
@@ -26,7 +27,10 @@ public class Order {
 
     public PayStatus pay(String payKey) {
 
-        PayMent payMent = PayStrategy.getPayMent(payKey);
+//        PayMent payMent = PayStrategy.getPayMent(payKey);
+
+        PayMent payMent = PayStrategyEnum.getPayMent(payKey).getPayMent();
+
         System.out.println("欢迎使用 "+payMent.getName());
         System.out.println("本次交易金额为： "+ amount + ",正在扣款。。。");
         return payMent.pay(uid,amount);

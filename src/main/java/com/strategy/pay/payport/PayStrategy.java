@@ -1,7 +1,5 @@
 package com.strategy.pay.payport;
 
-import com.strategy.pay.payport.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
